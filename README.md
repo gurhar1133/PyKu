@@ -13,5 +13,5 @@ Novel Features:
 
 Main objective:
 
-To improve familiarity/develop proficiency with git, github, nlp, python, markov analysis for text generation, file reading etc.
+To improve proficiency with git, github, nlp, python, markov analysis for text generation, file reading, debugging etc.
 
