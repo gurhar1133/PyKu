@@ -72,7 +72,7 @@ including word(s) that triggered the error"""
             else:
                 print("NOT A VALID HAIKU TRY AGAIN")
         except UnboundLocalError:
-            print("line with erroneous word or phrase unable to process, but now it is in corpus", file=sys.stderr)
+            print("line with erroneous word or phrase unable to process, but now it is in a missing words dictionary", file=sys.stderr)
             print("your addition to the corpus is valued. thank you. restart the program to write more haiku")
             sys.exit()
             
