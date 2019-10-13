@@ -8,7 +8,7 @@ An app based on the one in Lee Vaughan's Impractical Projects (see https://githu
 Novel Features:
  
  a haiku syllable checker that allows for manual entry of new words into the word list (see haiku_check.py and missing_words_finder.py)
- (novel feature). haiku generation (not novel but will include my own features to this functionality down the road)
+ (novel feature). May make some tweeks to the haiku generation as well.
  
 
 Main objective:
