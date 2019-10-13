@@ -7,10 +7,12 @@ import missing_words_finder as miss
 
 
 def fiveLine():
+    """ This function and the one right below are just for getting user input"""
     five_line = input("Enter a five syllable line: ")
     return five_line
 
 def sevenLine():
+    
     seven_line = input("Enter a seven syllable line:")
     return seven_line
 
@@ -18,6 +20,7 @@ def sevenLine():
 
 
 def main():
+    """ this is the function for writing haikus and having their lines get syllable checked"""
     while True:
         print("welcome to haiku trainer!".upper())
         print("Dont use punctuation here though. This is NOT a punctuation trainer after all!")
@@ -39,6 +42,9 @@ including word(s) that triggered the error"""
 
         except KeyError:
             print(err_mess, file=sys.stderr)
+            # calls on missing word finder if the word is not in the corpus
+            # now you can manually enter new words into the dictionary of haiku words
+            # and their syllable count while writing haikus.
             miss.main()
         
         

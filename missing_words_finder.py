@@ -55,7 +55,7 @@ def cmudict_missing(word_set):
     return exceptions
 
 def make_exceptions_dict(exceptions_set):
-    #Return dictionary of words and sullable counts from a set of words
+    """Returns dictionary of words and sullable counts from a set of words"""
     missing_words = {}
     print("Input # syllables in word. Mistakes can be corrected at end. \n")
     for word in exceptions_set:
@@ -93,8 +93,8 @@ def make_exceptions_dict(exceptions_set):
     return missing_words
 
 def save_exceptions(missing_words):
-    #Save exceptions to a dictionary as json file
-    #Save exceptions to a dictionary as json file
+    """Save exceptions to a dictionary as json file"""
+    
     json_string = json.dumps(missing_words)
     f = open("missing_words.json","a")
     f.write(json_string)
@@ -103,6 +103,14 @@ def save_exceptions(missing_words):
     jobj = open("missing_words.json","r")
     jdat = jobj.read()
     jdat_ls = []
+
+    # THis last chunk of code might be a bit rube goldbergy
+    # I might optimize it later.
+    # But essentially it gets rid of curly braces so that
+    # eventually the json file will just be one dictionary.
+    # It basically takes all the key value pairs in the json file
+    # and gets rid of all curly braces so that all the key value pairs
+    # will be within a single set of curly braces.
     for char in jdat:
         if char != "{" and char != "}":
             jdat_ls.append(char)
@@ -126,6 +134,10 @@ def save_exceptions(missing_words):
 
     jobj.close()
 
+    # but now we dont have any curly braces at the begining or end of
+    # the json file's text. so this part puts those in.
+    # Now we can add new key value pairs to the json file as a single dictionary
+    
     with open("missing_words.json","w") as rewriteObj:
         rewriteObj.write("{")
         for char in jdat_ls2:
