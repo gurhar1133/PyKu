@@ -3,7 +3,7 @@ A haiku project in progress
 
 Descrition:
 
-An app based on the one in Lee Vaughan's Impractical Projects (see https://github.com/rlvaugh/Impractical_Python_Projects). Most of the features and code are the same or similar to his, but novel features are being added.
+An app based on the one in Lee Vaughan's Impractical Projects (see https://github.com/rlvaugh/Impractical_Python_Projects). Most of the code is the same as his, but novel features were added. This is primarily a learning exercise.
 
 Novel Features:
  
